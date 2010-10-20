@@ -10,7 +10,10 @@ FOAF = Namespace("http://xmlns.com/foaf/0.1/")
 
 
 class MboxList2Foaf(object):
-    opt_parser = OptionParser(usage=__doc__)
+    opt_parser = OptionParser(usage="""
+Take a list of email addresses and turn them into an
+RDF graph representing a foaf:Group
+""")
     opt_parser.add_option("-c", "--config",
                           dest="config",
                           help="Configuration file")
@@ -91,7 +94,10 @@ class MboxList2Foaf(object):
 _from_re = re.compile("^.*<(?P<addr>.*)>")
 
 class CheckFoaf(object):
-    opt_parser = OptionParser(usage=__doc__)
+    opt_parser = OptionParser(usage="""
+Check incoming message headers (From) against an RDF
+file containing foaf:mbox or foaf:mbox_sha1sum triples
+""")
     opt_parser.add_option("-c", "--config",
                           dest="config",
                           help="Configuration file")

@@ -16,7 +16,7 @@ Put something like this in cron::
 (lines wrapped for readability)
 
 And if you have an RDF file, perhaps built from various sources
-that you whant to check to authorize mail, you can do put the 
+that you want to check to authorize mail, you can do put the 
 following in your *~/.tmda/filters/incoming*::
 
     pipe-headers "checkfoaf -i /some/where/bigwhitelist.rdf" accept
